@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+
+@keyframes nice-rotation {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+body {
+    background-color: #141d26;
+    font-family: 'Akshar', sans-serif;
+    font-size: 30px;
+    color: white;
+    padding: 70px 0;
+}
+
+.quiz-area {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+    width: 70vw;
+
+    margin: auto; /* centers the object horizontally*/
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: space-around;
+}
+
+h1 {
+    background-color: #c51f5d;
+    padding: 5px;
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.card-area {
+    background-color: #243447;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.card-row {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+    /*background-color: #c51f5d;*/
+    border: 10px solid white;
+    border-radius: 10px;
+    width: 15vmin;
+    height: 15vmin;
+    /*padding: 5px;*/
+    margin: 5px;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+
+
+}
+
+.front,
+.back {
+    /*background-color: #c51f5d;*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front {
+    background-color: #c51f5d;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: #141d26;
+    z-index: 1;
+    transform: rotateY(180deg);
+
+}
+
+.card:hover {
+    transform: rotateY(180deg)
+}
+
+p {
+    padding: 3px;
+    text-align: center;
+    font-size: 1.8vmin;
+}
